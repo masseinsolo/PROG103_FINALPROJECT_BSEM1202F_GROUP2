@@ -161,7 +161,7 @@ class LoginWindow:
             self.master.destroy()
             open_main_app()
         else:
-            self.lbl_err.config(text="❌ Incorrect username or password.")
+            self.lbl_err.config(text=" Incorrect username or password.")
 
     def open_register(self):
         reg = tk.Toplevel(self.master)
@@ -218,7 +218,7 @@ class LoginWindow:
 class CropAdvisorApp:
     def __init__(self, root):
         self.root = root
-        root.title("🌿 Crop Advisor – Smart Farming")
+        root.title(" Crop Advisor – Smart Farming")
         root.geometry("1280x780")
         root.configure(bg=C["bg"])
         root.minsize(960, 620)
@@ -285,7 +285,7 @@ class CropAdvisorApp:
         tk.Frame(self.sidebar, bg=C["border"], height=1).pack(fill="x", padx=15, pady=12)
 
         # Notification badge
-        self._notif_var = tk.StringVar(value="🔔  Alerts: 0")
+        self._notif_var = tk.StringVar(value="  Alerts: 0")
         tk.Label(self.sidebar, textvariable=self._notif_var,
                  font=("Segoe UI",9), bg=C["sidebar"], fg=C["muted"]).pack(padx=15, anchor="w")
 
